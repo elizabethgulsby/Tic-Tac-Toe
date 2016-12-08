@@ -13,26 +13,35 @@
 		<div class="row">
 			<div class="col-sm-12 text-center">
 				<h1>TIC TAC TOE</h1>
-				<h4>Hi there!  Want to play?  You go first!</h4>
 			</div>
+
+			<div id="message" class="col-sm-12 text-center">
+			<p id="initial-message">Hi there!  Care to play?  You can go first!</p>
+			</div>
+
 			<div id="board">
 			<!-- The first row, also a regular row -->
 				<div class="row-1 board-row">
-					<button id="A1" class="square" onclick="markSquare(this);">A1</button>
-					<button id="B1" class="square" onclick="markSquare(this);">B1</button>
-					<button id="C1" class="square" onclick="markSquare(this);">C1</button>
+					<button id="A1" class="square" onclick="markSquare(this);">-</button>
+					<button id="B1" class="square" onclick="markSquare(this);">-</button>
+					<button id="C1" class="square" onclick="markSquare(this);">-</button>
 				</div>
 
 				<div class="row-2 board-row">
-					<button id="A2" class="square" onclick="markSquare(this);">A2</button>
-					<button id="B2" class="square" onclick="markSquare(this);">B2</button>
-					<button id="C2" class="square" onclick="markSquare(this);">C2</button>
+					<button id="A2" class="square" onclick="markSquare(this);">-</button>
+					<button id="B2" class="square" onclick="markSquare(this);">-</button>
+					<button id="C2" class="square" onclick="markSquare(this);">-</button>
 				</div>
 
 				<div class="row-3 board-row">
-					<button id="A3" class="square" onclick="markSquare(this);">A3</button>
-					<button id="B3" class="square" onclick="markSquare(this);">B3</button>
-					<button id="C3" class="square" onclick="markSquare(this);">C3</button>
+					<button id="A3" class="square" onclick="markSquare(this);">-</button>
+					<button id="B3" class="square" onclick="markSquare(this);">-</button>
+					<button id="C3" class="square" onclick="markSquare(this);">-</button>
+				</div>
+
+				<div id="reset-area" class="col-sm-12 text-center hidden">
+					<h4>Care to play again?</h4>
+					<button id="reset" onclick="resetGame();">Reset Game</button>
 				</div>
 
 			</div>

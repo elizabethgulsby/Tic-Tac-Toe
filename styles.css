@@ -5,6 +5,10 @@
 	margin:  auto;
 }
 
+p {
+	margin-bottom: 0px;
+}
+
 .square {
 	width: 30%;
 	background-color: white;
@@ -13,6 +17,17 @@
 	float:  left;
 	font-size: 80px;
 	border:  2px solid black;
-	color:  white;
-	background-color: green;
+}
+
+.winning-square {
+	background-color: green !important;
+	color:  red !important;
+}
+
+#message {
+	padding-bottom: 20px;
+}
+
+#reset-area.hidden {
+	display: none;
 }
