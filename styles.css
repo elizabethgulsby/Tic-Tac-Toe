@@ -16,7 +16,9 @@ p {
 	box-sizing: border-box;
 	float:  left;
 	font-size: 80px;
-	border:  2px solid black;
+	border:  2px solid white;
+	border-radius: 25%;
+	color:  red;
 }
 
 .winning-square {
@@ -30,4 +32,21 @@ p {
 
 #reset-area.hidden {
 	display: none;
+}
+
+.square:hover {
+	/* transform:  scale(1.05);
+	transition: ease-in; */
+	background-color: green;
+	color:  red;
+}
+
+.square.winning-square {
+	transform: rotate(180deg);
+	transition:  2s;
+}
+
+.rotate {
+	transform: rotateY(360deg);
+	transition: 2s;
 }

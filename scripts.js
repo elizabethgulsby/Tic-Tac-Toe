@@ -34,9 +34,10 @@ function onePlayerGame() {
 	computerPlayer = true;
 }
 
-// $('.square').click(function() {
-// 	markSquare(this);
-// });
+$('.square').click(function() {
+	$(this).addClass('rotate');
+	markSquare(this);
+});
 
 function markSquare(currentSquare) {
 	// console.log(square.id);
@@ -104,7 +105,6 @@ function checkWin(whoJustWent, currentPlayerSquares) {
 			gameOver(whoJustWent, winningCombos[i]); //we're passing whoJustWent, which will be player1 or 2 (depending on the turn), and whichever i they managed in winningCombos, which will contain all j's within that winning i array combo
 			break; //halts the i loop, no reason to keep running - someone will have won
 		}
-		// console.log("Combo completed");
 	}
 }
 
@@ -116,7 +116,6 @@ function gameOver(whoJustWon, winningCombo) {
 	}
 	someoneWon = true;
 	var resetArea = document.getElementById('reset-area').className = 'col-sm-12 text-center'; //displays reset-area div when game ends
-	// console.dir(resetArea);
 }
 
 function resetGame() {
