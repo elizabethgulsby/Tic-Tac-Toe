@@ -30,11 +30,13 @@ var winningCombos = [
 ];
 // console.log(winningCombos);
 
-var buttons = []
-
 function onePlayerGame() {
 	computerPlayer = true;
 }
+
+// $('.square').click(function() {
+// 	markSquare(this);
+// });
 
 function markSquare(currentSquare) {
 	// console.log(square.id);
@@ -113,7 +115,7 @@ function gameOver(whoJustWon, winningCombo) {
 		document.getElementById(winningCombo[i]).className += ' winning-square'; //as long as the j's are in the winning i in winningCombo (selected by the player when clicked), those squares will have the winning-square class added to them
 	}
 	someoneWon = true;
-	var resetArea = document.getElementById('reset-area').className = 'col-sm-12 text-center'; //displays reset-area div
+	var resetArea = document.getElementById('reset-area').className = 'col-sm-12 text-center'; //displays reset-area div when game ends
 	// console.dir(resetArea);
 }
 
@@ -131,10 +133,20 @@ function resetGame() {
 		resetValue[i].className = 'square';
 	}
 	document.getElementById('message').innerHTML = "Hi there!  Care to play?  You can go first!"; //find a way to reference p class
-	var hideResetArea = document.getElementById('reset-area').className = 'col-sm-12 text-center hidden'; //re-hides reset-area div
+	var hideResetArea = document.getElementById('reset-area').className = 'col-sm-12 text-center hidden'; //re-hides reset-area div when game is reset
 }
 
-// add a feature to give the option (back?) between the computer and another human player
+//make reset area display if game isn't won - change h4 in this area to ask if player wants to try again
+//call onePlayerGame() to play against computer
+//make the computer try and win
+// - When the game resets in a one player game, make the human player, player2.
+// - Keep score of the game. 
+// - Make an nth sized grid. I.e., let the user choose how big the grid will be which means create everything in JS.
+// - Draw a line across the winning combination (see: https://lh6.ggpht.com/s81ioAPcrPetijf7dw1GunWrxJ3xBlrBuVDLAxEtmVf32YuxoMX37M5KnO3iZQMiBQ=w300)
+// - Use your "countdown" skills to keep track of how long each player’s moves take and make note of them.
+ 
+// Homework
+// Write a function that will check t-t-t winner on any size board (assume it is square)
 
 
 
